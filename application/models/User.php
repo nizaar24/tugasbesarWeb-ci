@@ -24,6 +24,10 @@
 		$data = array(
 	 			'username' => $this->input->post('username'),
 	 			'password' => md5($this->input->post('password')),
+	 			'email' => $this->input->post('email'),
+	 			'nmr_tlp' => $this->input->post('nmr_tlp'),
+	 			'gender' => $this->input->post('gender'),
+	 			'nama' => $this->input->post('nama'),
 	 			'level' => $this->input->post('level')
 	 		);
 	 	$this->db->insert('user',$data);

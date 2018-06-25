@@ -52,6 +52,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		redirect('Login','refresh');
 	}
 
+	public function Registrasi()
+	{
+		//$this->load->view('registrasi');
+      $this->load->library('form_validation');
+
+ 		$this->form_validation->set_rules('username','Username','trim|required');
+ 		$this->form_validation->set_rules('password','Password','trim|required');
+ 		$this->form_validation->set_rules('nama','Nama','trim|required');
+ 		$this->form_validation->set_rules('email','Email','trim|required');
+ 		$this->form_validation->set_rules('nmr_tlp','Nmr_tlp','trim|required');
+ 		$this->form_validation->set_rules('gender','Gender','trim|required');
+ 		if ($this->form_validation->run() == FALSE) {
+ 			$this->load->view('registrasi');
+ 		} else {
+ 			$this->load->model('user');
+ 			$this->user->InsertUser();
+ 			echo '<script>alert("Anda Berhasil Daftar")</script>';
+
+ 			redirect('Login','refresh');
+ 		}
+	}
+
  
  }
  
