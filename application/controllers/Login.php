@@ -12,6 +12,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	{
  		$this->load->model('user');
  		$username = $this->input->post('username');
+ 		$nama = $this->input->post('nama');
+ 		$email = $this->input->post('email');
+ 		$nmr_tlp = $this->input->post('nmr_tlp');
+ 		$gender = $this->input->post('gender');
  		$result = $this->user->login($username,$password);
  		if($result){
  			$sess_array = array();
@@ -19,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  				$sess_array = array(
  					'id'=>$row->id,
  					'username'=> $row->username,
- 					'level' => $row->level
+ 					'level' => $row->level,
+ 					'nama' => $row->nama,
+ 					'email' => $row->email,
+ 					'nmr_tlp' => $row->nmr_tlp,
+ 					'gender' => $row->gender
  				);
  				$this->session->set_userdata('logged_in',$sess_array);
  			}

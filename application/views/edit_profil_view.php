@@ -1,5 +1,3 @@
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+<body>
 
 <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
@@ -35,17 +33,14 @@
               <!-- <li class="active"><a class="nav-link" href="# ?>">Home <span class="sr-only">(current)</span></a></li> -->
 
                <li class="active">
-            <a class="nav-link" href="<?php site_url();?>Pegawai/">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?php site_url();?>Pegawai">Home<span class="sr-only">(current)</span></a>
             </li>
             <li><a class="nav-link" href="<?php site_url();?>User_c">Data User<span class="sr-only">(current)</span></a>
             </li>
             <li>
             <a class="nav-link" href="<?php site_url();?>Profil">Profil<span class="sr-only">(current)</span></a>
           </li>
-              
-              
-              
-              
+                 
             </ul>
             <form class="navbar-form navbar-left" role="search">
               <div class="form-group">
@@ -67,47 +62,49 @@
               </li>
             </ul>
 
- <ul class="nav navbar-nav navbar-right">
+			 <ul class="nav navbar-nav navbar-right">
 
-   <li> <a href="<?php echo base_url('index.php/Login/logout') ?>" >(<?php echo $username?>) LOGOUT</a></li>
- </ul>
+			   <li> <a href="<?php echo base_url('index.php/Login/logout') ?>" >(<?php echo $username?>) LOGOUT</a></li>
+			 </ul>
+          
           </div><!-- /.navbar-collapse -->
 
         </div>
       </nav>
 
-    <main role="main" class="container">
-      <div class="jumbotron">
-        <div class="container">
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1> Anda Berhasil Login </h1><br>
-          <h2> Selamat Datang : </h2> <h1> <?php echo $username?></h1>
-        </div>
-        <br><br>
-        <div align="left"><a href="<?php echo site_url()?>/login/logout"><button type="button" class="btn btn-primary"><h2>Log Out</h2></button>
+<main role="main" class="container">
+  <div class="jumbotron">
+    <div class="container">
 
-          
-        </div>
-      </div>
-    
-   
-
-
-<!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="#">Data Pegawai</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <body>
-      
-    </body> -->
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<?php echo form_open('profil/update/'. $this->uri->segment(3)); ?>
+		
+		<legend>Edit Data Pegawai</legend>
+		<?php echo validation_errors(); ?>
+		<div class="form-group">
+			<label for="">user name</label>
+			<input type="text" class="form-control" name="username" id="username" value="<?php echo $profil[0]->username ?>" placeholder="Input field">
+		</div>
+			<div class="form-group">
+			<label for="">nama</label>
+			<input type="text" class="form-control" name="nama" id="nama" value="<?php echo $profil[0]->nama ?>" placeholder="Input field">
+		</div>
+      <div class="form-group">
+      <label for="">password</label>
+      <input type="password" class="form-control" name="password" id="password" value="<?php echo $profil[0]->password ?>" placeholder="Input field">
+    </div>
+		<div class="form-group">
+			<label for="">email</label>
+			<input type="text" class="form-control" name="email" id="email" value="<?php echo $profil[0]->email ?>" placeholder="Input field">
+		</div>
+    <div class="form-group">
+      <label for="">tel</label>
+      <input type="text" class="form-control" name="nmr_tlp" id="nmr_tlp" value="<?php echo $profil[0]->nmr_tlp ?>" placeholder="Input field">
+    </div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+		<?php echo form_close(); ?>
+	</div>
+	
+	</div>
+  </div>
+</main>

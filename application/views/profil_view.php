@@ -1,5 +1,3 @@
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+<body>
 
 <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
@@ -35,12 +33,12 @@
               <!-- <li class="active"><a class="nav-link" href="# ?>">Home <span class="sr-only">(current)</span></a></li> -->
 
                <li class="active">
-            <a class="nav-link" href="<?php site_url();?>Pegawai/">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?php site_url();?>Pegawai">Home<span class="sr-only">(current)</span></a>
             </li>
             <li><a class="nav-link" href="<?php site_url();?>User_c">Data User<span class="sr-only">(current)</span></a>
             </li>
             <li>
-            <a class="nav-link" href="<?php site_url();?>Profil">Profil<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?php site_url();?>Login">Profil<span class="sr-only">(current)</span></a>
           </li>
               
               
@@ -81,11 +79,17 @@
         <div class="container">
         
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1> Anda Berhasil Login </h1><br>
-          <h2> Selamat Datang : </h2> <h1> <?php echo $username?></h1>
+          <h1> Profil Anda </h1><br>
+          <h2> User name : </h2> <h1> <?php echo $username?></h1>
+          <h2> Nama : </h2> <h1> <?php echo $nama?></h1>
+          <h2> email : </h2> <h1> <?php echo $email?></h1>
+          <h2> No. Tlp : </h2> <h1> <?php echo $nmr_tlp?></h1>
+          <h2> Gender : </h2> <h1> <?php echo $gender?></h1>
+
         </div>
         <br><br>
         <div align="left"><a href="<?php echo site_url()?>/login/logout"><button type="button" class="btn btn-primary"><h2>Log Out</h2></button>
+         <a href="<?php echo base_url("index.php/Profil/update/" . $username) ?>" class="btn btn-sm btn-success">Edit</a>
 
           
         </div>
