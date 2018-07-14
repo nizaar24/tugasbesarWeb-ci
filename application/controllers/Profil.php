@@ -9,7 +9,7 @@ class Profil extends CI_Controller {
 		parent::__construct();
 		if ($this->session->userdata('logged_in')) {
 			$session_data = $this->session->userdata('logged_in');
-			$data['id'] = $session_data['id'];
+			$data['idUser'] = $session_data['idUser'];
 			$data['username'] = $session_data['username'];
 			$data['level'] = $session_data['level'];
 			$data['nama'] = $session_data['nama'];
@@ -70,7 +70,7 @@ class Profil extends CI_Controller {
 		else
 		{
 			$this->User->updateById($username);
-			redirect('Pegawai','refresh');
+			redirect('Pegawai',$data);
 		}
 		}
 

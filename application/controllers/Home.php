@@ -11,9 +11,14 @@ class Home extends CI_Controller {
 	
 	public function index($merk=null)
 	{
+		$this->load->model('user');
+		 $session_data = $this->session->userdata('logged_in');
+			 $data['username'] = $session_data['username'];
+			 $data['idUser'] = $session_data['idUser'];
+			
+			$data['user'] = $this->user->getUser('idUser');
 		$this->load->model('Item_model');
 		$data['list_item'] = $this->Item_model->getDataKontrakan();
-		
 		// if ($merk != null) {
 		// 	$where = array('merk'=>$merk);
 		// 	$data['list_item'] = $this->Item_m->getData($where);

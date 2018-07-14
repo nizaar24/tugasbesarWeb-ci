@@ -5,7 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
  	public function index()
  	{
- 		$this->load->view('login_view');
+ 		$session_data = $this->session->userdata('logged_in');
+			 $data['username'] = $session_data['username'];
+			 $data['nama'] = $session_data['nama'];
+ 		$this->load->model('Item_model');
+		$data['list_item'] = $this->Item_model->getDataKontrakan();
+
+ 		$this->load->view('home',$data);
  	}
  	
  	public function cekDb($password)
@@ -21,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  			$sess_array = array();
  			foreach ($result as $row) {
  				$sess_array = array(
- 					'id'=>$row->id,
+ 					'idUser'=>$row->idUser,
  					'username'=> $row->username,
  					'level' => $row->level,
  					'nama' => $row->nama,

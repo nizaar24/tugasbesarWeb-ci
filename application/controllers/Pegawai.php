@@ -11,10 +11,7 @@ class Pegawai extends CI_Controller {
 			$session_data = $this->session->userdata('logged_in');
 			$data['username'] = $session_data['username'];
 			$data['level'] = $session_data['level'];
-			// $data['nama'] = $session_data['nama'];
-			// $email = $this->input->post('email');
- 		// 	$nmr_tlp = $this->input->post('nmr_tlp');
- 		// 	$gender = $this->input->post('gender');
+			
 			$current_controller = $this->router->fetch_class();
 			$this->load->library('acl');
 			if (! $this->acl->is_public($current_controller)) {

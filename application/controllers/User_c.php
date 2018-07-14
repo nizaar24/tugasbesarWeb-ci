@@ -39,7 +39,7 @@ class User_c extends CI_Controller {
 		{
 		$this->load->helper('url','form');
 		$this->load->model('user');
-		$data['id'] = $id;
+		$data['idUser'] = $id;
 		$this->user->hapusData($id);
 		redirect('User_c');
 		}

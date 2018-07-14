@@ -5,7 +5,7 @@
 
  	public function Login($username,$password)
 	{
-		$this->db->select('id,username,password,level,nama,email,nmr_tlp,gender');
+		$this->db->select('idUser,username,password,level,nama,email,nmr_tlp,gender');
 		$this->db->from('user');
 		$this->db->where('username', $username);
 		$this->db->where('password', MD5($password));
@@ -67,7 +67,7 @@
 		// if($this->db->delete($this->table)){
 		// 	return "Berhasil";
 		// }
-		if ($this->db->delete("user", "id = ".$id)) { 
+		if ($this->db->delete("user", "idUser = ".$id)) { 
             return true; 
 			}
 	}
