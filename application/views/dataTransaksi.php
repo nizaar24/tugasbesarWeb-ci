@@ -126,10 +126,9 @@
 							</td>
 						</tr>
 					<?php endforeach ?>
-
-					
 				</tbody>
 			</table>
+      <a href="<?php echo base_url('index.php/ReportDataTransaksi/cetakDataTransaksi')?>" class="btn pull-right"><span class="glyphicon glyphicon-save"></span> Report</a>
 	</div>
 </div>
 </div>
