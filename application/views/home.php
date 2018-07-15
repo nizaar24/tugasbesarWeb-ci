@@ -52,8 +52,11 @@
           <p class="price">fasilitas: <?php echo $value['fasilitas']; ?></p>
         <p class="price">sewa/hari: Rp.<?php echo $value['harga']; ?></p>
         <p class="price">status:<?php echo $value['status']; ?></p>
-        <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-1">Details</button> -->
-        <a href='user/prosesbooking.php?id=<?php echo $row['id'];?>'><button class= 'btn btn-primary btn-sm'>BOOKING</button></a>
+        <?php if($value['status'] == 'tidak tersedia') { ?>
+        <a href='<?php echo base_url("index.php/Transaksi/error") ?>'><button class= 'btn btn-warning btn-sm disabled'>BOOKING</button></a>
+        <?php } else{ ?>
+        <a href='<?php echo base_url("index.php/Transaksi/transaksi/".$value['id']) ?>'><button class= 'btn btn-primary btn-sm '>BOOKING</button></a><?php } ?>
+      
       </div>
     </div>
     </center>

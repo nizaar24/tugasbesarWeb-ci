@@ -71,15 +71,48 @@
 			$this->db->update('item', $data);
 		}
 
+		public function updateStatus($id)
+		{
+			$data = array(
+
+				'status' => $this->input->post('status'),
+				
+			);
+			
+			$this->db->where('id', $id);
+			$this->db->update('item', $data);
+		}
 		public function delete($id)
 		{ 
         	if ($this->db->delete("item", "id = ".$id)) { 
             return true; 
-        }
-      } 
+        	}
+      	} 
+
+      	public function transaksi($id)
+		{
+			$tgl=$this->input->post('tanggal');
+			$tglBaru=date_format(new DateTime($tgl),"Y-m-d");
+			$obj = array(
+				'username' => $this->input->post('username'),
+				'nama' => $this->input->post('nama'),
+				'nmr_tlp' => $this->input->post('nmr_tlp'),
+				'email' => $this->input->post('email'),
+				'gender' => $this->input->post('gender'),
+				'idItem' => $this->input->post('id'),
+				'alamat' => $this->input->post('alamat'),
+				'kamar' => $this->input->post('kamar'),
+				'fasilitas' => $this->input->post('fasilitas'),
+				'harga' => $this->input->post('harga'),
+				'keterangan' => $this->input->post('keterangan'),
+				'tanggal' => $tglBaru,
+			);
+
+			$this->db->insert('transaksi', $obj);
+		}
  	
  
- 	 }
+ }
  
  /* End of file Item_model.php */
  /* Location: ./application/models/Item_model.php */ ?>
