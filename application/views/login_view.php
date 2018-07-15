@@ -25,8 +25,7 @@
       <br>
       <button type="submit" class="btn btn-info btn-block btn-lg">Log In</button>
 
-      <a href="<?php echo site_url()?>/Login/registrasi"><button type="button" class="btn btn-success btn-block btn-lg">Registrasi</button>
+      <a href="<?php echo site_url()?>/Login/registrasi"><button type="button" class="btn btn-success btn-block btn-lg">Registrasi</button></a>
       <?php form_close(); ?>
     </div>
-  </div>
-</div>
+ </div>
