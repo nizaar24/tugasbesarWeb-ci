@@ -32,14 +32,20 @@
             <ul class="nav navbar-nav">
               <!-- <li class="active"><a class="nav-link" href="# ?>">Home <span class="sr-only">(current)</span></a></li> -->
 
-               <li class="active">
-            <a class="nav-link" href="<?php site_url();?>Pegawai">Home<span class="sr-only">(current)</span></a>
+                <li class="active">
+            <a class="nav-link" href="<?php site_url();?>Item">Item<span class="sr-only">(current)</span></a>
             </li>
-            <li><a class="nav-link" href="<?php site_url();?>Jabatan">Jabatan<span class="sr-only">(current)</span></a>
+            <li><a class="nav-link" href="<?php site_url();?>User_c">Data User<span class="sr-only">(current)</span></a>
             </li>
             <li>
-            <a class="nav-link" href="<?php site_url();?>Anak">Anak<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?php site_url();?>Profil">Profil<span class="sr-only">(current)</span></a>
           </li>
+           <li>
+            <a class="nav-link" href="<?php site_url();?>DataTransaksi">Data Transaksi<span class="sr-only">(current)</span></a>
+          </li>
+         <!--  <li>
+            <a class="nav-link" href="<?php site_url();?>Item">Item<span class="sr-only">(current)</span></a>
+          </li> -->
               
               
               

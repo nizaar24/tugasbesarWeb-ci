@@ -68,7 +68,7 @@
           </ul>
       </li>
  <?php else: ?>
-            <li> <a href="<?php echo base_url('index.php/Login/logout') ?>" ><b>(<?php echo $username?><?php echo $nama?>) LOGOUT</b></a></li>
+            <li> <a href="<?php echo base_url('index.php/Login/logout') ?>" ><b>(<?php echo $username?>) LOGOUT</b></a></li>
             <?php endif ?>
 
  </ul>

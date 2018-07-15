@@ -68,7 +68,7 @@ $acl = array(
 		'user' => false,
 		'admin' => true,
 	),
-	'Anak' => array(
+	'Transaksi' => array(
 		'user' => false,
 		'admin' => true,
 	),
@@ -79,6 +79,10 @@ $acl = array(
 	'Profil' => array(
 		'user' => true,
 		'admin' => false,
+	),
+	'DataTransaksi' => array(
+		'user' => false,
+		'admin' => true,
 	)
 
 );

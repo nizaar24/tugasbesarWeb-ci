@@ -35,12 +35,18 @@
               <!-- <li class="active"><a class="nav-link" href="# ?>">Home <span class="sr-only">(current)</span></a></li> -->
 
                <li class="active">
-            <a class="nav-link" href="<?php site_url();?>Pegawai/">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?php site_url();?>Pegawai">Home<span class="sr-only">(current)</span></a>
             </li>
             <li><a class="nav-link" href="<?php site_url();?>User_c">Data User<span class="sr-only">(current)</span></a>
             </li>
             <li>
             <a class="nav-link" href="<?php site_url();?>Profil">Profil<span class="sr-only">(current)</span></a>
+          </li>
+           <li>
+            <a class="nav-link" href="<?php site_url();?>DataTransaksi">Data Transaksi<span class="sr-only">(current)</span></a>
+          </li>
+          <li>
+            <a class="nav-link" href="<?php site_url();?>Item">Item<span class="sr-only">(current)</span></a>
           </li>
               
               
@@ -85,7 +91,7 @@
           <h2> Selamat Datang : </h2> <h1> <?php echo $username?></h1>
         </div>
         <br><br>
-        <div align="left"><a href="<?php echo site_url()?>/login/logout"><button type="button" class="btn btn-primary"><h2>Log Out</h2></button>
+        <div align="left"><a href="<?php echo site_url()?>/Home"><button type="button" class="btn btn-primary"><h2>Lanjut</h2></button>
 
           
         </div>

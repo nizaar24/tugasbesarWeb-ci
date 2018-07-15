@@ -16,7 +16,8 @@ class User_c extends CI_Controller {
 			if (! $this->acl->is_public($current_controller)) {
 				if (! $this->acl->is_allowed($current_controller,$data['level'])) 
 				{
-					redirect('Login/logout','refresh');
+					echo '<script>alert("Anda Tidak Memiliki Hak Akses")</script>';
+					redirect('home','refresh');
 				}
 			}
 		} else {

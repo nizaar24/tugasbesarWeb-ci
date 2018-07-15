@@ -47,6 +47,7 @@
         <p class="price"></p></center>
         <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details-1">Details</button> -->
         <a href='<?php echo base_url('index.php/Home') ?>'><button class= 'btn btn-primary btn-sm'>SELESAI</button></a>
+        <a href="<?php echo base_url('index.php/Report/cetakTransaksi')?>" class="btn pull-right"><span class="glyphicon glyphicon-save"></span> Report</a>
       </div>
     </div>
   </div>

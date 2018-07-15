@@ -50,12 +50,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$this->form_validation->set_rules('username', 'Username' , 'trim|required');
 		$this->form_validation->set_rules('password', 'Password' , 'trim|required|callback_cekDb');
 		if  ($this->form_validation->run() == FALSE) {
-
-			$this->load->view('Login_view');
+			//echo '<script>alert("Anda Harus Login Terlebih Dahulu")</script>';
+			$this->load->model('Item_model');
+			$data['list_item'] = $this->Item_model->getDataKontrakan();
+			$this->load->view('home', $data);
 
 		} else 
 		{
-			redirect('Pegawai','refresh');
+			if ($this->session->userdata('logged_in')) {
+				$session_data = $this->session->userdata('logged_in');
+				if(!($session_data['username']) OR ($session_data['level']!='admin')){
+					redirect('Pegawai','refresh');
+
+				}
+				else{redirect('Item','refresh');}
+			}
 		} 
 	}
 
