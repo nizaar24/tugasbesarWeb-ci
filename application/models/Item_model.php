@@ -23,12 +23,11 @@
 		}
 		public function insertKontrakan()
 		{
-			// $tgl=$this->input->post('tglLahir');
-			// $tglBaru=date_format(new DateTime($tgl),"Y-m-d");
+			
 			$object = array(
 				'alamat' => $this->input->post('alamat'),
+				'kamar'=> $this->input->post('kamar'),
 				'fasilitas' => $this->input->post('fasilitas'),
-				// 'tanggalLahir' => $tglBaru,
 				'harga' => $this->input->post('harga'),
 				'keterangan' => $this->input->post('keterangan'),
 				'gambar' => $this->upload->data('file_name'));

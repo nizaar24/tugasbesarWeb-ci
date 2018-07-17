@@ -35,7 +35,7 @@
       
         <div class="row"></div>
         
-       <div class="col-12"><h1>Item</h1></div>
+       <div class="col-12"><br></div>
   <?php foreach ($list_item as $key => $value): ?>
 
     <div class="col-md-3">

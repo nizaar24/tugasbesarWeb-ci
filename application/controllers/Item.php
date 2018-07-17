@@ -41,6 +41,7 @@
 			$this->load->model('item_model');
 			$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
 			$this->form_validation->set_rules('fasilitas', 'Fasilitas', 'trim|required');
+			$this->form_validation->set_rules('kamar', 'kamar', 'trim|required');
 			$this->form_validation->set_rules('harga', 'Harga', 'trim|required');
 			$this->form_validation->set_rules('keterangan', 'Keterangan', 'trim|required');
 			

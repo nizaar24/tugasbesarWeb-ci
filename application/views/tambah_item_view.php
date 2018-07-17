@@ -90,6 +90,8 @@
         <input type="text" class="form-control" name="alamat" placeholder="Input field">
             <label for="">Fasilitas</label>
         <input type="text" class="form-control" name="fasilitas" placeholder="Input field">
+          <label for="">jumlah kamar</label>
+        <input type="text" class="form-control" name="kamar" placeholder="Input field">
               <label for="">Harga</label>
         <input type="text" class="form-control" name="harga" placeholder="Input field">
               <label for="">Keterangan</label>
