@@ -88,9 +88,9 @@
       <tr><td></td><td></td><td></td><td></td>
       		<td>Tanggal Mulai Kontrak</td>
       		<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : &nbsp&nbsp</td>
-      		<td><input type="Date" class="form-control" name="tanggalLahir" id="tanggalLahir" placeholder="Input field"></td>
+      		<td><input type="Date" class="form-control" name="tanggal" id="tanggal" placeholder="Input field"></td>
           <td><input type="hidden" class="form-control" name="id" id="id" value="<?php echo $item[0]->id ?>" readonly></td>
-          <td><input type="hidden" class="form-control" name="status" id="status" value="tidak tersedia" readonly></td>
+         
       </tr>
       	
       	

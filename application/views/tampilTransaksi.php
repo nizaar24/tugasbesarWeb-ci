@@ -30,9 +30,9 @@
                 <tr><td>kontrak/tahun</td>
                 	<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : &nbsp&nbsp</td>
                 	<td><?php echo  $item[0]->harga; ?></td></tr>
-                <tr><td>Tanggal masuk</td>
+                <!-- <tr><td>Tanggal masuk</td>
                 	<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : &nbsp&nbsp</td>
-                	<td><?php ; ?></td></tr>
+                	<td><?php echo $tanggal; ?></td></tr> -->
                 <tr><td>jumlah kamar</td>
                 	<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : &nbsp&nbsp</td>
                 	<td><?php echo $item[0]->kamar; ?></td></tr>

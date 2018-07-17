@@ -80,11 +80,11 @@
 </nav>
 
 
-<main role="main" class="container">
-<div class="jumbotron">
+
 <div class="container">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h1>Table</h1>
+
 			<!-- <a href="<?php echo base_url('index.php/Item_c/tambah') ?>" class="btn btn-primary mb-3">Tambah</a> -->
 			<table class="table table-bordered table-striped" id="table_id">
 				<thead>
@@ -121,8 +121,9 @@
               <td><?php echo $value['harga'] ?></td>
               <td><?php echo $value['keterangan'] ?></td>
               <td><?php echo $value['harga'] ?></td>
+
 							<td>
-							<a href="<?php echo base_url('index.php/DataTransaksi/hapus/'.$value['id_transaksi']) ?>" class="btn btn-sm btn-danger">Hapus</a> 
+							<a href="<?php echo base_url('index.php/DataTransaksi/hapus/'.$value['idItem']) ?>" class="btn btn-sm btn-danger">Hapus</a> 
 							</td>
 						</tr>
 					<?php endforeach ?>
@@ -131,8 +132,7 @@
       <a href="<?php echo base_url('index.php/ReportDataTransaksi/cetakDataTransaksi')?>" class="btn pull-right"><span class="glyphicon glyphicon-save"></span> Report</a>
 	</div>
 </div>
-</div>
-</main>
+
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript">

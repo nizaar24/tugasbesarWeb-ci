@@ -75,13 +75,26 @@
 		{
 			$data = array(
 
-				'status' => $this->input->post('status'),
+				'status' => ("tidak tersedia"),
 				
 			);
 			
 			$this->db->where('id', $id);
 			$this->db->update('item', $data);
 		}
+
+		public function updateStatus2($id)
+		{
+			$data = array(
+
+				'status' => ("tersedia"),
+				
+			);
+			
+			$this->db->where('id', $id);
+			$this->db->update('item', $data);
+		}
+
 		public function delete($id)
 		{ 
         	if ($this->db->delete("item", "id = ".$id)) { 

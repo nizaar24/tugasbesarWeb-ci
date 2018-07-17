@@ -8,9 +8,9 @@
 			$query = $this->db->get("transaksi");
 			return $query->result_array();
 		}
-	public function hapusData($id_transaksi)
+	public function hapusData($idItem)
 	{
-		if ($this->db->delete("transaksi", "id_transaksi = ".$id_transaksi)) { 
+		if ($this->db->delete("transaksi", "idItem = ".$idItem)) { 
             return true; 
 			}
 	}

@@ -37,12 +37,15 @@ public function index()
 		$this->load->view('dataTransaksi', $data, FALSE);	
 	}
 
-public function hapus($id_transaksi)
+public function hapus($idItem)
 		{
 		$this->load->helper('url','form');
 		$this->load->model('transaksi_m');
-		$data['id_transaksi'] = $id_transaksi;
-		$this->transaksi_m->hapusData($id_transaksi);
+		$this->load->model('item_model');
+		$data['idItem'] = $idItem;
+		$this->transaksi_m->hapusData($idItem);
+		$this->item_model->updateStatus2($idItem);
+
 		redirect('DataTransaksi');
 		}
 }
