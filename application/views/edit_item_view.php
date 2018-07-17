@@ -1,7 +1,17 @@
-<?php $this->load->view('header'); ?>
+<?php $this->load->view('header2'); ?>
 	
+<div class="container-fluid">
+  
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+  
+</div>
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+  <div class="panel panel-default">
+    <div class="panel-body">
+     
+   
 	<?php echo form_open_multipart('item/update/'.$this->uri->segment(3)); ?>
       	<legend>Edit Data item</legend>
       	<?php echo validation_errors(); ?>
@@ -35,9 +45,13 @@
       	</div> -->
       	<button type="submit" class="btn btn-primary">Submit</button>
 	<?php echo form_close(); ?>
+    
+    </div>
+  </div>
+  
+    </div>
+  </div>
 </div>
-
-
 
   <!-- Bootstrap core JavaScript
       ================================================== -->

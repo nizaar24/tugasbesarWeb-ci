@@ -31,6 +31,8 @@ class DataTransaksi extends CI_Controller {
 
 public function index()
 	{
+		$session_data = $this->session->userdata('logged_in');
+		$data['username'] = $session_data['username'];
 		$this->load->helper('url','form');
 		$this->load->model('transaksi_m');
 		$data['transaksi_list'] = $this->transaksi_m->getDataTransaksi();

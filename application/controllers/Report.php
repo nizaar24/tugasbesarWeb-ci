@@ -21,7 +21,7 @@ class Report extends CI_Controller {
 		$data['nmr_tlp'] = $session_data['nmr_tlp'];
 		$data['email'] = $session_data['email'];
 		$data['gender'] = $session_data['gender'];
-		$idUser= $session_data['idUser'];
+		// $idUser= $session_data['idUser'];
 		
 		// $this->load->model('Get_transaksi');
 		// $data['item'] = $this->Get_transaksi->getKontrakan();

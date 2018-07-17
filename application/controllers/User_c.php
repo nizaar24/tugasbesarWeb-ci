@@ -27,8 +27,8 @@ class User_c extends CI_Controller {
 		
 		public function Index()
 		{
-		 // $session_data = $this->session->userdata('logged_in');
-		 // $data['username'] = $session_data['username'];
+		 $session_data = $this->session->userdata('logged_in');
+		 $data['username'] = $session_data['username'];
 		 // $data['user_list'] = $this->User->getDataUser();
 		$this->load->helper('url','form');
 		$this->load->model('user');

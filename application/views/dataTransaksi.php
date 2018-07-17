@@ -1,6 +1,10 @@
-<?php $this->load->view('header'); ?>
+<?php $this->load->view('header2'); ?>
 
 <div class="container">
+<div class="panel panel-default">
+	<div class="panel-body">
+		
+	
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h1>Table</h1>
 
@@ -39,7 +43,8 @@
               <td><?php echo $value['fasilitas'] ?></td>
               <td><?php echo $value['harga'] ?></td>
               <td><?php echo $value['keterangan'] ?></td>
-              <td><?php echo $value['harga'] ?></td>
+              <td><?php echo $value['tanggal'] ?></td>
+
 
 							<td>
 							<a href="<?php echo base_url('index.php/DataTransaksi/hapus/'.$value['idItem']) ?>" class="btn btn-sm btn-danger">Hapus</a> 
@@ -51,7 +56,8 @@
       <a href="<?php echo base_url('index.php/ReportDataTransaksi/cetakDataTransaksi')?>" class="btn pull-right"><span class="glyphicon glyphicon-save"></span> Report</a>
 	</div>
 </div>
-
+</div>
+</div>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript">

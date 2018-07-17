@@ -1,5 +1,5 @@
 <?php  ?>
-<?php $this->load->view('header'); ?>
+<?php $this->load->view('header2'); ?>
 
 <main role="main" class="container">
 <div class="jumbotron">
